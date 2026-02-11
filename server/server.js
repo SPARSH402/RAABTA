@@ -7,10 +7,10 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 
-
-const io = require('socket.io')(3001, {
+const PORT = process.env.PORT || 3001
+const io = require('socket.io')(PORT, {
         cors : {
-            origin : 'http://localhost:3000',
+            origin : "*",
             methods : ["GET", "POST"],
         },
 })
