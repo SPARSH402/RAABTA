@@ -77,7 +77,7 @@ export default function TextEditor() {
 
 
     useEffect(() => {
-       const s = io("http://127.0.0.1:3001")
+       const s = io("https://raabta.onrender.com")
        setSocket(s)
         return () =>{
             s.disconnect()
